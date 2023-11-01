@@ -14,11 +14,11 @@ return new class extends Migration
         Schema::create('roles_users', function (Blueprint $table) {
 
             $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('roles_id');
+            $table->unsignedBigInteger('role_id');
             $table->morphs('assignable');
 
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('roles_id')->references('id')->on('roles');
+            $table->foreign('role_id')->references('id')->on('roles');
 
         });
     }
