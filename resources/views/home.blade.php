@@ -58,7 +58,7 @@ https://templatemo.com/tm-558-klassy-cafe
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a href="#about">About</a></li>
+                            <li class="scroll-to-section"><a href="#about">Orders</a></li>
                            	
                         <!-- 
                             <li class="submenu">
@@ -71,14 +71,14 @@ https://templatemo.com/tm-558-klassy-cafe
                             </li>
                         -->
                             <li class="scroll-to-section"><a href="#menu">Menu</a></li>
-                            <li class="scroll-to-section"><a href="#chefs">Chefs</a></li> 
+                            <li class="scroll-to-section"><a href="#chefs">Employees</a></li> 
                             <li class="submenu">
-                                <a href="javascript:;">Features</a>
+                                <a href="javascript:;">Restaurants</a>
                                 <ul>
-                                    <li><a href="#">Features Page 1</a></li>
-                                    <li><a href="#">Features Page 2</a></li>
-                                    <li><a href="#">Features Page 3</a></li>
-                                    <li><a href="#">Features Page 4</a></li>
+                                    <li><a href="#">Restaurant in Tetovo</a></li>
+                                    <li><a href="#">Restaurant in Skopje</a></li>
+                                    <li><a href="#">Restaurant in Ohrid</a></li>
+                                    <li><a href="#">Restaurant in Gostivar</a></li>
                                 </ul>
                             </li>
                             <!-- <li class=""><a rel="sponsored" href="https://templatemo.com" target="_blank">External URL</a></li> -->
@@ -151,18 +151,6 @@ https://templatemo.com/tm-558-klassy-cafe
                         <div class="section-heading">
                             <h6>About Us</h6>
                             <h2>We Leave A Delicious Memory For You</h2>
-                        </div>
-                        <p>Garden Caffè is one of the best </p>
-                        <div class="row">
-                            <div class="col-4">
-                                <img src="assets/images/about-thumb-01.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img src="assets/images/about-thumb-02.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img src="assets/images/about-thumb-03.jpg" alt="">
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -447,7 +435,7 @@ https://templatemo.com/tm-558-klassy-cafe
     <!-- ***** Reservation Area Ends ***** -->
 
     <!-- ***** Menu Area Starts ***** -->
-    <section class="section" id="offers">
+    <!-- <section class="section" id="offers">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 offset-lg-4 text-center">
@@ -709,7 +697,7 @@ https://templatemo.com/tm-558-klassy-cafe
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- ***** Chefs Area Ends ***** --> 
     
     <!-- ***** Footer Start ***** -->
@@ -733,7 +721,7 @@ https://templatemo.com/tm-558-klassy-cafe
                     <div class="left-text-content">
                         <p>© Copyright: Garden Caffè.
                         
-                        <br>Design: B.V</p>
+                        <br>Design: Bridge Tech.</p>
                     </div>
                 </div>
             </div>
