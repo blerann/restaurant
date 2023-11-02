@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Models\Role;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\RoleResource;
 
 class RoleController extends Controller
 {
@@ -13,7 +14,8 @@ class RoleController extends Controller
      */
     public function index()
     {
-        return Role::all();
+        $role = Role::all();
+        return RoleResource::collection($role);
     }
 
     /**
@@ -26,6 +28,7 @@ class RoleController extends Controller
         $role->name= $request->name;
 
         $role->save();
+        return new RoleResource($role);
     }
 
     /**
@@ -37,7 +40,7 @@ class RoleController extends Controller
        if(!$role){
          return response()->json(['message' => 'Role not found'], 404);
        }
-        return response()->json($role,200);
+        return new RoleResource($role);
     }
 
     /**
@@ -48,9 +51,9 @@ class RoleController extends Controller
         $role= Role::find($id);
         if($role){
            
-            $role = new Role;
             $role->name = $request->name;
             $role->save();
+            return new RoleResource($role);
             
         }
 
@@ -70,6 +73,6 @@ class RoleController extends Controller
 
         $role->delete();
 
-        return response()->json("Role deleted");
+        return response()->noContent();
     }
 }
