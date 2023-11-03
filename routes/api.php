@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\CapabilitiesController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\RoleController;
@@ -20,6 +21,21 @@ Route::get('/role/{id}', [RoleController::class, 'show']);
 Route::patch('/role/{id}', [RoleController::class, 'update']);
 Route::delete('/role/{id}', [RoleController::class, 'destroy']);
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::get('/capability', [CapabilitiesController::class, 'index']);
+Route::post('/capability', [CapabilitiesController::class, 'store']);
+Route::get('/capability/{id}', [CapabilitiesController::class, 'show']);
+Route::patch('/capability/{id}', [CapabilitiesController::class, 'update']);
+Route::delete('/capability/{id}', [CapabilitiesController::class, 'destroy']);
+
+Route::post('/login', \App\Http\Controllers\Api\Auth\LoginController::class);
+Route::post('/register', \App\Http\Controllers\Api\Auth\RegisterController::class);
+
+Route::middleware('auth:sanctum')->get('/users', function (Request $request) {
+    return $request->users();
+});
+
+Route::middleware('auth:sanctum')->group(function(){
+    Route::get('test', function(){
+return response()->json('inside route');
+    });
 });
