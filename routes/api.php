@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Api\Auth\LoginController;
+use App\Http\Controllers\Api\Auth\RegisterController;
 use App\Http\Controllers\Api\CapabilityController;
 use App\Http\Controllers\Api\RoleController;
 use Illuminate\Http\Request;
@@ -29,6 +31,20 @@ Route::post('/capability',[CapabilityController::class,'store']);
 Route::get('/capability/{id}',[CapabilityController::class,'show']);
 Route::patch('/capability/{id}',[CapabilityController::class,'update']);
 Route::delete('/capability/{id}',[CapabilityController::class,'destroy']);
+
+//register and log in routes
+Route::post('/register',RegisterController::class);
+Route::post('/login',LoginController::class);
+Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+    return $request->user();
+});
+
+Route::middleware('auth:sanctum')->group(function () {
+
+    Route::get('test', function () {
+        return response()->json('inside route');
+    });
+});
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
